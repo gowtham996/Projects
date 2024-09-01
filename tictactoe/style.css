@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #EBD3F8; /* Light purple for background */
+    color: #2E073F; /* Dark purple for text */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* Game Board Styling */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    border: 5px solid #7A1CAC; /* Medium purple border */
+    background-color: #AD49E1; /* Light purple background */
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Box (button) Styling */
+.box {
+    background-color: #7A1CAC; /* Medium purple for boxes */
+    color: #EBD3F8; /* Light purple text */
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active States */
+.box:hover {
+    background-color: #AD49E1; /* Light purple hover effect */
+}
+
+.box:active {
+    transform: scale(0.95);
+}
+
+/* Reset Button Styling */
+.reset-button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #2E073F; /* Dark purple for reset button */
+    color: #EBD3F8;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: #7A1CAC;
+    transform: scale(1.05);
+}
+
+.reset-button:active {
+    transform: scale(0.95);
+}
+
+/* Winner Message Styling */
+.mescon {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2E073F;
+    color: #EBD3F8;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #AD49E1;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#mes {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* New Game Button in Message Container */
+#newbt {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #7A1CAC;
+    color: #EBD3F8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#newbt:hover {
+    background-color: #AD49E1;
+    transform: scale(1.05);
+}
+
+#newbt:active {
+    transform: scale(0.95);
+}
+
+/* Show the message container when needed */
+.show {
+    display: block;
+}
